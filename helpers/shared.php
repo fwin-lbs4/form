@@ -1,6 +1,7 @@
 <?php
 
 require_once "csv.php";
+require_once "components.php";
 
 $isPost = $_SERVER['REQUEST_METHOD'] === "POST";
 
@@ -51,7 +52,7 @@ function verifyLogin($file)
 
   $postPassword = $_POST["password"] ?? null;
 
-  if (!$isLoggedIn && $sessionUser && $postPassword) {
+  if ($isLoggedIn !== true && $sessionUser && $postPassword) {
     $user = getUser($sessionUser, $file);
 
     if ($user) {

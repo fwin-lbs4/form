@@ -1,8 +1,5 @@
 <?php
 
-require_once "helpers/helpers.php";
-require_once "helpers/form.php";
-require_once "helpers/csv.php";
 require_once "helpers/shared.php";
 
 $dom = document(
