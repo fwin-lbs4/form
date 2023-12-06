@@ -9,7 +9,6 @@ if ($isPost && $_FILES['file']['size'] > 0) {
   saveFile($_FILES["file"]);
 }
 
-
 $dom = document(
   [
     head("Anmeldeformular"),
