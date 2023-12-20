@@ -7,6 +7,14 @@ $isPost = $_SERVER['REQUEST_METHOD'] === "POST";
 
 $usersFile = "users.csv";
 
+if (!file_exists("users.csv")) {
+  file_put_contents("users.csv", file_get_contents("users-template.csv"));
+}
+
+if (!file_exists("session.json")) {
+  file_put_contents("session.json", json_encode([]));
+}
+
 $isLoggedIn = verifyLogin($usersFile);
 
 if (isset($_POST["logout"]) && $_POST["logout"] === "true") {
