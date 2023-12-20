@@ -10,7 +10,7 @@ function nav($isLoggedIn)
   $ret .= "<li><a href='/form/'>Anmeldeformular</a></li>";
 
   if ($isLoggedIn === true) {
-    $ret .= "<li><a href='/form/login.php'>User</a><li>";
+    $ret .= "<li><a href='/form/login.php'>User</a></li>";
   }
 
   $ret .= "<li>";

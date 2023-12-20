@@ -40,11 +40,35 @@ body {
     list-style-type: none;
     padding: 0;
 
-    & a {
+    & a,
+    & form button {
       display: block;
       padding: 0.5em;
-      border: thin solid white;
+      border-width: thin;
+      border-style: solid;
+      border-color: white;
       border-radius: 1000vmax;
+      background-color: black;
+      text-decoration: none;
+      color: white;
+      cursor: pointer;
+
+      transition: color 100ms ease-in-out, border-color 100ms ease-in-out;
+
+      &.active,
+      &:not(.active):hover {
+        color: red;
+        border-color: red;
+      }
+
+      &.active:hover {
+        color: white;
+        border-color: white;
+      }
+    }
+
+    & form {
+      display: contents;
     }
   }
 }
@@ -61,6 +85,13 @@ body {
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 0.5rem;
+
+        align-items: center;
+        justify-items: start;
+      }
+
+      & img {
+        margin-inline: auto;
       }
     }
 
@@ -88,6 +119,10 @@ body {
         }
       }
     }
+  }
+
+  & pre.logs {
+    white-space: break-spaces;
   }
 }
 
