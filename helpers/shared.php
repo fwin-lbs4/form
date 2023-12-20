@@ -8,7 +8,7 @@ $isPost = $_SERVER['REQUEST_METHOD'] === "POST";
 $usersFile = "users.csv";
 
 if (!file_exists("users.csv")) {
-  file_put_contents("users.csv", file_get_contents("users-template.csv"));
+  file_put_contents("users.csv", "salutation;name;date;mail;password;street;city;zip;state;phone;file;file");
 }
 
 if (!file_exists("session.json")) {
